@@ -1,0 +1,16 @@
+# Project-specific config (contains sensitive values)
+CONFIG.md
+**/CONFIG.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# QA screenshots
+playwright-qa-screenshots/
