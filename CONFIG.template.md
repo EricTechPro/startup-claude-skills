@@ -86,6 +86,35 @@ Map file paths to routes for QA navigation:
 | `settings/**` | `/settings` |
 | Default | `/` |
 
+## GitHub (fix-issue skill)
+
+| Setting | Value | Notes |
+|---------|-------|-------|
+| Repo | `owner/repo` | GitHub repository in `owner/repo` format. Detected automatically from `git remote get-url origin` if omitted. |
+
+### GitHub Labels
+
+Labels applied to issues during the fix-issue pipeline. Create these in your repo with `gh label create`.
+
+| Label | Used When |
+|-------|-----------|
+| `in-review` | Fix complete, unresolved review findings remain |
+| `fixed` | Fix complete, review clean or all findings resolved |
+
+### PR Reviewers
+
+| Alias | GitHub Username | Role |
+|-------|----------------|------|
+| `dev` | `@your-dev` | Default PR reviewer |
+
+### GitHub Assignees
+
+| Alias | GitHub Username | Role |
+|-------|----------------|------|
+| `dev` | `@your-dev` | Default PR assignee |
+
+---
+
 ## Complex Fix Delegation (Optional)
 
 | Setting | Value | Notes |

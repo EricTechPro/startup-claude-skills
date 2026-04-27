@@ -11,6 +11,7 @@ Skills are reusable prompt templates that teach Claude Code how to perform compl
 | Skill | Description | Use Case |
 |-------|-------------|----------|
 | **fix-ticket** | End-to-end bug fix pipeline: read Jira ticket, research, implement fix, review, commit, push, deploy, update ticket | Bug fixing with full CI/CD integration |
+| **fix-issue** | End-to-end GitHub issue fix pipeline: read GitHub issue, research, implement fix, review, commit, push, create PR, comment on issue | Bug fixing for GitHub-native workflows |
 | **develop-team** | Full feature development with parallel research agents, planning, phased implementation, review, and PR creation | Feature development from Jira ticket to PR |
 | **review-team** | 5-agent PR review with Devil's Advocate adversarial filtering. Only findings that survive cross-examination make the final report | High-confidence PR reviews |
 | **review-fix** | Automated review-fix loop: 8 parallel reviewers, auto-fix quick items, accumulate strategic items | Pre-PR code quality automation |
@@ -58,6 +59,10 @@ startup-claude-skills/
       SKILL.md
       references/
         qa-integration.md
+    fix-issue/                    # End-to-end GitHub issue fix pipeline
+      SKILL.md
+      references/
+        qa-integration.md
     develop-team/                 # Full feature development pipeline
       SKILL.md
       references/
@@ -82,6 +87,7 @@ startup-claude-skills/
 
 These skills work with [Claude Code](https://claude.com/claude-code) and may use:
 
+- **GitHub CLI (`gh`)** — for issue/PR management in fix-issue
 - **Jira MCP** — for ticket management (`mcp__jira__*`)
 - **Vercel MCP** — for deployment monitoring (`mcp__claude_ai_Vercel__*`)
 - **Supabase MCP** — for database operations (`mcp__supabase__*` or `mcp__plugin_supabase_supabase__*`)
